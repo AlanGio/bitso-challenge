@@ -1,0 +1,20 @@
+html, 
+body {
+  height: 100%;
+  min-width: 600px;
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+  background-color: #eee;
+  padding-top: 60px;
+}
+
+#root, .App {
+  height: 100%;
+}
+
+.App {
+  margin: 0;
+}

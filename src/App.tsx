@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { ChangeEvent, useCallback, useState } from 'react';
 
-function App() {
+import ControlsContainer from './containers/ControlsContainer';
+import GridContainer from './containers/GridContainer';
+
+import './App.scss';
+
+const App = () => {
+  const [columns, setColumns] = useState<number>(10);
+  const [rows, setRows] = useState<number>(10);
+
+  const onSetColumns = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      setColumns(+event.target.value);
+    },
+    [],
+  );
+
+  const onSetRows = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      setRows(+event.target.value);
+    },
+    [],
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ControlsContainer
+        columns={columns}
+        setColumns={onSetColumns}
+        setRows={onSetRows}
+        rows={rows}
+      />
+      <GridContainer
+        columns={columns}
+        rows={rows}
+      />
     </div>
   );
 }

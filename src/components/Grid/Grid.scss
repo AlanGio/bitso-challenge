@@ -1,0 +1,22 @@
+body {
+  .component-grid {
+    height: 100%;
+
+    .grid-container {
+      display: grid;
+      height: 100%;
+      
+      .cell-row {
+        .cell {
+          background-color: lightblue;
+          outline: 1px solid white;
+
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
