@@ -1,15 +1,12 @@
 
-import { useEffect } from 'react';
 import { Grid, GridProps } from '../../components/Grid';
 
-type GridContainerProps = Pick<GridProps, 'columns' | 'rows'>;
+type GridContainerProps = GridProps;
 
-const GridContainer = ({columns, rows}: GridContainerProps) => {
+const GridContainer = (props: GridContainerProps) => {
 
   return (
-    <>
-      <Grid columns={columns} rows={rows} />
-    </>
+      <Grid {...props} />
   );
 };
 

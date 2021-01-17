@@ -1,22 +1,25 @@
 
 import { Container, Row, Col } from 'react-bootstrap';
+import classnames from 'classnames';
 
 import './Grid.scss';
 
 export type GridProps = {
-  columns: number,
-  rows: number,
+  cells: boolean[][],
+  onClickCell: (row: number, column: number) => void;
 }
 
-export const Grid = ({ columns, rows }: GridProps) => {
+export const Grid = ({ cells, onClickCell }: GridProps) => {
+
+  console.log(cells, 'cellsongrid');
 
   return (
     <div className="component-grid">
     <Container className="grid-container" fluid>
-     {Array.from({ length: rows }, () => (
+     {cells.map((_, indexRow) => (
         <Row className="cell-row">
-          {Array.from({ length: columns }, () => (
-            <Col className="cell"></Col>
+          {cells[indexRow].map((cell, indexColumn) => (
+            <Col className={classnames('cell', { 'land': cell })} onClick={() => onClickCell(indexRow, indexColumn)}></Col>
           ))}
         </Row> 
      ))}

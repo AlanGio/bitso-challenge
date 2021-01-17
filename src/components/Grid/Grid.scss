@@ -5,15 +5,19 @@ body {
     .grid-container {
       display: grid;
       height: 100%;
-      
+
       .cell-row {
         .cell {
-          background-color: lightblue;
+          background-color: #ADF;
           outline: 1px solid white;
 
           &:hover {
             opacity: 0.8;
             cursor: pointer;
+          }
+
+          &.land {
+            background-color: #B84;
           }
         }
       }
