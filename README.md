@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# Welcome to Small Sea Word
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setup
 
-## Available Scripts
+After clone this Repo, you should run:
+### `yarn install`
 
-In the project directory, you can run:
-
+To run the project locally, you can use:
 ### `yarn start`
-
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### You can also see a DEMO here: [http://bitso-challenge.herokuapp.com/](http://bitso-challenge.herokuapp.com/).
+
 
 ### `yarn test`
-
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Code Components:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### App.tsx
+It's the main component, will render the main screen and load Grid and Controls Components.
+This component has the logic to handle the three posible user actions (Click on Cell elements, Move Columns or Rows Bar).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### components/Controls/index.tsx
+This is a Presentational Component, shows the Controls to modify the quantity of Columns and Rows what we want to have in our Grid.
+Receives the next Props:
 
-### `yarn eject`
+columns: number (Quantity of columns)
+onChangeColumns: function (Callback of user columns bar action)
+onChangeRows: function (Callback of user rows bar action)
+rows: number (Quantity of rows)
+islands: number (Quantity of islands)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### components/Grid/index.tsx
+This is a Presentational Component, shows the Grid with the Sea and Land Cells.
+Receives the next props:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cells: array (A multidimentional booleans array with the cells. false value represents sea and true represents land)
+onClickCell: function (Callback of user cell click)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### utils/utils.tsx
+This is a utils file with the different functions used in App Component to handle and draw the grid and detect islands if exists
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Libraries used:
+- typescript
+- react
+- react-dom
+- bootstrap and react-bootstrap
+- lodash
+- react-device-detect
+- classnames
+- node-sass
 
-## Learn More
+Testing Library:
+- jest
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+

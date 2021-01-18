@@ -23,47 +23,45 @@ export const Controls = ({
   onChangeRows,
   rows,
   islands,
-}: ControlsProps) => {
-  return (
-    <div className="component-controls">
-      <Container className="controls-container" fluid>
-        <Form>
-          <Row className="align-items-center">
-            <Col sm={5} xs={12}>
-              <Form.Group controlId="columnsRange">
-                <Form.Label>Columns {columns}</Form.Label>
-                <Form.Control
-                  type="range"
-                  onChange={onChangeColumns}
-                  min={COLS_MIN}
-                  max={COLS_MAX}
-                  value={columns}
-                />
-              </Form.Group>
-            </Col>
-            <Col sm={5} xs={8}>
-              <Form.Group controlId="rowsRange">
-                <Form.Label>Rows {rows}</Form.Label>
-                <Form.Control
-                  type="range"
-                  onChange={onChangeRows}
-                  min={ROWS_MIN}
-                  max={ROWS_MAX}
-                  value={rows}
-                />
-              </Form.Group>
-            </Col>
+}: ControlsProps) => (
+  <div className="component-controls">
+    <Container className="controls-container" fluid>
+      <Form>
+        <Row className="align-items-center">
+          <Col sm={5} xs={12}>
+            <Form.Group controlId="columnsRange">
+              <Form.Label>Columns {columns}</Form.Label>
+              <Form.Control
+                type="range"
+                onChange={onChangeColumns}
+                min={COLS_MIN}
+                max={COLS_MAX}
+                value={columns}
+              />
+            </Form.Group>
+          </Col>
+          <Col sm={5} xs={8}>
+            <Form.Group controlId="rowsRange">
+              <Form.Label>Rows {rows}</Form.Label>
+              <Form.Control
+                type="range"
+                onChange={onChangeRows}
+                min={ROWS_MIN}
+                max={ROWS_MAX}
+                value={rows}
+              />
+            </Form.Group>
+          </Col>
 
-            <Col sm={2} xs={4}>
-              <h5>
-                <Badge variant="secondary">Islands: {islands}</Badge>
-              </h5>
-            </Col>
-          </Row>
-        </Form>
-      </Container>
-    </div>
-  );
-};
+          <Col sm={2} xs={4}>
+            <h5>
+              <Badge variant="secondary">Islands: {islands}</Badge>
+            </h5>
+          </Col>
+        </Row>
+      </Form>
+    </Container>
+  </div>
+);
 
 export default Controls;
