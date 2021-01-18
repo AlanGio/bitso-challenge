@@ -1,11 +1,11 @@
-import React, { ChangeEvent, useCallback, useState } from 'react';
+import React, { ChangeEvent, useCallback, useState } from "react";
 
-import { Controls } from './components/Controls';
-import { Grid } from './components/Grid';
+import { Controls } from "./components/Controls";
+import { Grid } from "./components/Grid";
 
-import { loadItems, detectIslands } from './utils/utils';
+import { loadItems, detectIslands } from "./utils/utils";
 
-import './App.scss';
+import "./App.scss";
 
 export const COL_INIT = 4;
 export const ROW_INIT = COL_INIT;
@@ -21,7 +21,7 @@ const App = () => {
       setColumns(columnsQty);
       setCells(loadItems(columnsQty, rows, cells));
     },
-    [cells, rows],
+    [cells, rows]
   );
 
   const handleChangeRows = useCallback(
@@ -30,16 +30,16 @@ const App = () => {
       setRows(rowsQty);
       setCells(loadItems(columns, rowsQty, cells));
     },
-    [cells, columns],
+    [cells, columns]
   );
 
   const handleOnClickCell = useCallback(
-    (row: number, column: number)  => {
-      let selectedCells = [...cells]
+    (row: number, column: number) => {
+      let selectedCells = [...cells];
       selectedCells[row][column] = !selectedCells[row][column];
       setCells(selectedCells);
     },
-    [cells],
+    [cells]
   );
 
   const islands = detectIslands(columns, rows, cells);
@@ -53,12 +53,9 @@ const App = () => {
         rows={rows}
         islands={islands}
       />
-      <Grid
-        cells={cells}
-        onClickCell={handleOnClickCell}
-      />
+      <Grid cells={cells} onClickCell={handleOnClickCell} />
     </div>
   );
-}
+};
 
 export default App;
