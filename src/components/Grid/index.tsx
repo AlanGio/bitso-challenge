@@ -11,8 +11,6 @@ export type GridProps = {
 
 export const Grid = ({ cells, onClickCell }: GridProps) => {
 
-  console.log(cells, 'cellsongrid');
-
   return (
     <div className="component-grid">
     <Container className="grid-container" fluid>
