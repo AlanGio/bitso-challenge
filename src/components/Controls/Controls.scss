@@ -8,3 +8,11 @@ body {
     top: 0;
   }
 }
+
+@media (max-width: 576px) {
+  body {
+    .component-controls {
+      height: 130px;
+    }
+  }
+}

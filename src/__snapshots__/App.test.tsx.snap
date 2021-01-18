@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should render App component with default columns and rows 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <div
+      class="component-controls"
+    >
+      <div
+        class="controls-container container-fluid"
+      >
+        <form
+          class=""
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col-sm-5 col-12"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class="form-label"
+                  for="columnsRange"
+                >
+                  Columns 
+                  4
+                </label>
+                <input
+                  class="form-control-range"
+                  id="columnsRange"
+                  max="50"
+                  min="2"
+                  type="range"
+                  value="4"
+                />
+              </div>
+            </div>
+            <div
+              class="col-sm-5 col-10"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class="form-label"
+                  for="rowsRange"
+                >
+                  Rows 
+                  4
+                </label>
+                <input
+                  class="form-control-range"
+                  id="rowsRange"
+                  max="50"
+                  min="2"
+                  type="range"
+                  value="4"
+                />
+              </div>
+            </div>
+            <div
+              class="col-sm-2 col-2"
+            >
+              Islands: 
+              0
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      class="component-grid"
+    >
+      <div
+        class="grid-container container-fluid"
+      >
+        <div
+          class="cell-row row"
+        >
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+        </div>
+        <div
+          class="cell-row row"
+        >
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+        </div>
+        <div
+          class="cell-row row"
+        >
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+        </div>
+        <div
+          class="cell-row row"
+        >
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+          <div
+            class="cell col"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

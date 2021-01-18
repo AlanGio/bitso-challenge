@@ -1,13 +1,14 @@
 import React, { ChangeEvent, useCallback, useState } from 'react';
 
-import ControlsContainer from './containers/ControlsContainer';
-import GridContainer from './containers/GridContainer';
+import { Controls } from './components/Controls';
+import { Grid } from './components/Grid';
 
-import './App.scss';
 import { loadItems, detectIslands } from './utils/utils';
 
-const COL_INIT = 4;
-const ROW_INIT = COL_INIT;
+import './App.scss';
+
+export const COL_INIT = 4;
+export const ROW_INIT = COL_INIT;
 
 const App = () => {
   const [columns, setColumns] = useState<number>(COL_INIT);
@@ -41,18 +42,18 @@ const App = () => {
     [cells],
   );
 
-  const islands = detectIslands(cells, rows, columns);
+  const islands = detectIslands(columns, rows, cells);
 
   return (
     <div className="App">
-      <ControlsContainer
+      <Controls
         columns={columns}
         onChangeColumns={handleChangeColumns}
         onChangeRows={handleChangeRows}
         rows={rows}
         islands={islands}
       />
-      <GridContainer
+      <Grid
         cells={cells}
         onClickCell={handleOnClickCell}
       />

@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid /> should render Grid component with 4 rows, 4 columns and islands empty 1`] = `
+<div>
+  <div
+    class="component-grid"
+  >
+    <div
+      class="grid-container container-fluid"
+    >
+      <div
+        class="cell-row row"
+      >
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+      </div>
+      <div
+        class="cell-row row"
+      >
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+      </div>
+      <div
+        class="cell-row row"
+      >
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+      </div>
+      <div
+        class="cell-row row"
+      >
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+        <div
+          class="cell col"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

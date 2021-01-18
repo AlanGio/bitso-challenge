@@ -18,3 +18,14 @@ body {
 .App {
   margin: 0;
 }
+
+@media (max-width: 576px) {
+  html, 
+  body {
+    min-width: auto;
+    height: 100%;
+  }
+  body {
+    padding-top: 130px;
+  }
+}

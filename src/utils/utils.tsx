@@ -13,20 +13,21 @@ export const loadItems = (columns: number, rows: number, cells: boolean[][] = []
   	for (let rowNum = 0; rowNum < newCells.length; rowNum++) {
   		deltaColumns < 0 ? newCells[rowNum].pop() : newCells[rowNum].push(false);	
   	}
-  }
-  return newCells;
+	}
+	return newCells;
 }
 
 export const newRow = (columns: number) => {
 	const row = []
 	for (let y = 0; y < columns; y++) {
-      row[y] = false;
-    }
+		row[y] = false;
+	}
   return row;
 }
 
-export const detectIslands = (cells: boolean[][], rows: number, columns: number) => {
-	let visitMap:boolean[][] = []
+export const detectIslands = (columns: number, rows: number, cells: boolean[][]) => {
+
+	const visitMap:boolean[][] = []
 	for (let rowNum = 0; rowNum < rows; rowNum++){
 		visitMap.push([])
 		for (let colNum = 0; colNum < columns; colNum++){
@@ -43,6 +44,7 @@ export const detectIslands = (cells: boolean[][], rows: number, columns: number)
 			}
 		}
 	}
+
 	return count;
 }
 
@@ -58,6 +60,6 @@ export const walkIsland = (cells: boolean[][], visitMap: boolean[][], rowNum: nu
   }
 }
 
-export const withinBounds = (cells: boolean[][], visitMap: boolean[][], rowNum: number, colNum: number) => {
-	return (rowNum >= 0) && (rowNum < cells.length) && (colNum >= 0) && (colNum < cells[0].length) && (cells[rowNum][colNum] && !visitMap[rowNum][colNum]); 
-}
+export const withinBounds = (cells: boolean[][], visitMap: boolean[][], rowNum: number, colNum: number) =>
+	(rowNum >= 0) && (rowNum < cells.length) && (colNum >= 0) && (colNum < cells[0].length) && (cells[rowNum][colNum] && !visitMap[rowNum][colNum]); 
+;

@@ -1,5 +1,7 @@
 
 import { Container, Row, Col } from 'react-bootstrap';
+import { uniqueId } from 'lodash';
+
 import classnames from 'classnames';
 
 import './Grid.scss';
@@ -10,14 +12,13 @@ export type GridProps = {
 }
 
 export const Grid = ({ cells, onClickCell }: GridProps) => {
-
   return (
     <div className="component-grid">
     <Container className="grid-container" fluid>
      {cells.map((_, indexRow) => (
-        <Row className="cell-row">
+        <Row key={uniqueId('row_')} className="cell-row">
           {cells[indexRow].map((cell, indexColumn) => (
-            <Col className={classnames('cell', { 'land': cell })} onClick={() => onClickCell(indexRow, indexColumn)}></Col>
+            <Col key={uniqueId('col_')} className={classnames('cell', { 'land': cell })} onClick={() => onClickCell(indexRow, indexColumn)}></Col>
           ))}
         </Row> 
      ))}
