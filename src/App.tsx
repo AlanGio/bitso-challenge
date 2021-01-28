@@ -1,5 +1,7 @@
 import React, { ChangeEvent, useCallback, useState } from "react";
 
+import api from "./api";
+
 import { Controls } from "./components/Controls";
 import { Grid } from "./components/Grid";
 
@@ -14,6 +16,8 @@ const App = () => {
   const [columns, setColumns] = useState<number>(COL_INIT);
   const [rows, setRows] = useState<number>(ROW_INIT);
   const [cells, setCells] = useState<boolean[][]>(loadItems(columns, rows));
+
+  api.getJoke().then((response) => console.log(response, 'Joke!'));
 
   const handleChangeColumns = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
