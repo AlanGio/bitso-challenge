@@ -1,10 +1,7 @@
-/* eslint-disable no-undef */
-import axios from 'axios';
+import getJoke from './getJoke';
 
-export const getJoke = () => {
-  return axios.get(
-    `https://official-joke-api.appspot.com/random_joke`
-  );
+const api = {
+  getJoke,
 };
 
-export default { getJoke };
+export default api;
