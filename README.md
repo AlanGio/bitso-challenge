@@ -10,7 +10,7 @@ To run the project locally, you can use:
 Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-#### You can also see a DEMO here: [http://bitso-challenge.herokuapp.com/](http://bitso-challenge.herokuapp.com/).
+#### You can also see a DEMO here: [https://alangio.github.io/small-sea-world/](https://alangio.github.io/small-sea-world/).
 
 
 ### `yarn test`
